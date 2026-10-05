@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/resume.css"
+</head>
+<body>
+    <h1>This is my resume page</h1>
+    <div class="main">
+    <div class="head">
+        <img src="/static/img/photo.jpg" id="img">
+        <h1  id="name">{{resume.name}}</h1>
+        <p>{{resume.ph}}</p>
+        <p>{{resume.email}}</p>
+    </div>
+    <hr>
+    <p class="topic">Objective</p>
+    <p>{{resume.objective}}</p>
+    <hr>
+    <p class="topic">Experience</p>
+    <p>{{resume.experience}}</p>
+    <p>{{resume.role}}</p>
+    <p >{{resume.experience_details}}</p>
+    <hr>
+    <p class="topic">Skills</p>
+    <ul>
+    
+    {% for i in resume.skills %}
+    
+    <li>{{i}}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <p class="topic">Qualifications</p>
+    <p>{{resume.qualification}}</p>
+    </div>
+</body>
+</html>
